@@ -1,0 +1,9 @@
+## 實現servlet context
+
+把自己寫的HelloServlet,IndexServlet註冊到servlet context
+
+在httpConnector 建構的時候,同時建構servlet context
+
+並且在process方法裡面,收到http請求的時候,去找註冊進servlet context的 servlet,有沒有辦法處理這個請求
+
+servlet是在ServletContextImpl 裡面的addServlet方法中,用反射去new這個class的
